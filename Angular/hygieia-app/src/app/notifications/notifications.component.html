@@ -1,0 +1,15 @@
+
+<div class="menu">
+    <div *ngFor="let element of notifications">
+        <div *ngIf="element.status" class="item" >
+            <div class="text title">{{element.title}}</div>
+            <p class="text">{{element.description}}</p>
+        </div>
+
+        <div *ngIf="!element.status" class="item" >
+            <div *ngIf="!element.status" class="text-old title">{{element.title}}</div>
+            <p *ngIf="!element.status" class="text-old">{{element.description}}</p>
+        </div>
+
+    </div>
+</div>
